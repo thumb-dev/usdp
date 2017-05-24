@@ -1,0 +1,19 @@
+/*
+Static file for Theme changes
+Theme name: My SPA Theme
+Version: 1.0
+Template: Howdy
+*/
+
+.main-wrapper {
+    background-color:#FFFFFF;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.jumbotron {
+    margin:0px;
+    background-color: transparent;
+}
+.jumbotron h2 img {
+    max-height: 100%;
+}
