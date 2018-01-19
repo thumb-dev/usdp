@@ -78,3 +78,23 @@ four51.app.filter('paginate', function() {
 		return input.slice(start);
 	}
 });
+four51.app.filter('shipperOrderWeight', function() {
+    return function(shipper, order) {
+        var orderWeight = 0;
+        var output = [];
+        angular.forEach(order.LineItems, function(item) {
+            orderWeight += (item.Product.ShipWeight * item.Quantity);
+        });
+
+        angular.forEach(shipper, function(s) {
+            if (orderWeight <= 150 && s.Name != "Bulk Shipping (over 150 lbs)") {
+                output.push(s);
+            } else if (orderWeight > 150 && s.Name == "Bulk Shipping (over 150 lbs)") {
+                output.push(s);
+            }
+              });
+
+
+        return output;
+    }
+});
