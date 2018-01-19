@@ -57,6 +57,13 @@ function ($scope, $route, $location, $451, User, Order, Security, OrderConfig, C
 		if (Security.isAuthenticated()) {
 			User.get(function (user) {
 				$scope.user = user;
+        $scope.adminMember = false;
+				angular.forEach($scope.user.Groups, function(group){
+					if(group.Name == "Admin"){
+						$scope.adminMember = true;
+					}
+				});
+        
                 $scope.user.Culture.CurrencyPrefix = XLATService.getCurrentLanguage(user.CultureUI, user.Culture.Name)[1];
                 $scope.user.Culture.DateFormat = XLATService.getCurrentLanguage(user.CultureUI, user.Culture.Name)[2];
 
