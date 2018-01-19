@@ -13,6 +13,27 @@ function ($scope, $routeParams, $location, $filter, $rootScope, $451, User, Orde
         $location.path('catalog');
     }
 
+
+    var cartCC = false;
+	       
+    for (var i = $scope.currentOrder.LineItems.length - 1; i >= 0; i--) {
+         if($scope.currentOrder.LineItems[i].Product.StaticSpecGroups != null && $scope.currentOrder.LineItems[i].Product.StaticSpecGroups.isapparel != null){
+            var staticSpe = $scope.currentOrder.LineItems[i].Product.StaticSpecGroups.isapparel.Specs.Item.Value;
+            console.log(staticSpe);
+         };
+         
+
+        if(staticSpe === "true"){
+            cartCC = true;
+            break;
+        }else{
+            cartCC = false;
+     	    break;
+        };
+    };
+   $scope.cartCC = cartCC;
+
+
 	$scope.hasOrderConfig = OrderConfig.hasConfig($scope.currentOrder, $scope.user);
 	$scope.checkOutSection = $scope.hasOrderConfig ? 'order' : 'shipping';
 
@@ -46,6 +67,12 @@ function ($scope, $routeParams, $location, $filter, $rootScope, $451, User, Orde
 	$scope.$watch('currentOrder.CostCenter', function() {
 		OrderConfig.address($scope.currentOrder, $scope.user);
 	});
+	
+	$scope.FHCentralOrderFields = {};
+	angular.forEach($scope.currentOrder.OrderFields, function(field){
+		$scope.FHCentralOrderFields[field.Name] = field;
+	});
+
 
 	$scope.$watch('currentOrder.LineItems',function(item){
 		if(!item)return;
