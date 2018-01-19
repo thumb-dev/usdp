@@ -5,10 +5,22 @@ Version: 1.0
 Template: Howdy
 */
 
+.header-navigation {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 .main-wrapper {
     background-color:#FFFFFF;
-    max-width: 1200px;
     margin: 0 auto;
+}
+.headerLogo {
+    width: 100%;
+}
+
+.headerRow {
+    margin-left: 14%;
+    margin-right: 14%;
 }
 .jumbotron {
     margin:0px;
@@ -17,3 +29,151 @@ Template: Howdy
 .jumbotron h2 img {
     max-height: 100%;
 }
+.bannerImage {
+    background-image: url('http://thumbprint.com/four51_images/spiracare/SpiraCare_lobby.png');
+    height: 550px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.btn-group > .btn:last-child:not(:first-child), .btn-group > .dropdown-toggle:not(:first-child) {
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+.mainContainer {
+    padding-right: 15%;
+    padding-left: 15%;
+}
+
+.navItemsHover:hover {
+    background: #49C5B1;
+    // color: #333333 !important;
+}
+.navbar-nav li.dropdown li > a {
+    color: white;
+}
+.dropdown-menu, .dropdown-mega .dropdown-menu {
+    background-color: #49C5B1;
+}
+
+.panel-category-list ul li a img {
+    margin: 0 auto;
+    max-height: 250px;
+}
+.badge {
+    background-color: red;
+    color: white;
+}
+.navbar .container .navbar-nav.pull-left li.fadeInLeft a i, .navbar .container-view .navbar-nav.pull-left li.fadeInLeft a i {
+    color: white;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color: #49C5B1;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    background-color: #49C5B1;
+    color: #ffffff;
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-mega .dropdown-menu > li > a:hover,
+.dropdown-mega .dropdown-menu > li > a:focus {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #698bac;
+}
+
+// .sliderImage {
+//     padding-left: 15%;
+//     padding-right: 15%;
+// }
+
+/* ------------------- Carousel Styling ------------------- */
+
+.jumbotron {
+  margin-top: 20px;   
+}
+
+.carousel-inner {
+  border-radius: 15px;
+}
+
+.carousel-caption {
+  background-color: rgba(0,0,0,.5);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  padding: 0 0 10px 10px;
+  color: #fff;
+  text-align: left;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+//   z-index: 15;
+  margin: 0;
+  padding: 0 25px 10px 0;
+  text-align: right;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+  background-image: none;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-prev, .carousel-control .icon-next {
+   
+}
+.carousel-control .icon-next, .carousel-control .glyphicon-chevron-right {
+   
+}
+
+/* ------------------- Section Styling - Not needed for carousel styling ------------------- */
+.shellAnchor:hover .shellColor, 
+.shellAnchor:focus .shellColor {
+  -webkit-filter: grayscale(100%);
+  filter:  grayscale(100%);
+  box-shadow: #224 0.2em 0.2em 0.6em 0.1em;
+}
+
+
+.btn-info {
+    border-color: #296880;
+    background-color: #296880;
+}
+.btn-info:hover {
+    border-color: #7FCDCD;
+    background-color: #7FCDCD;
+}
+.logonBtn:hover {
+    border-color: #7FCDCD;
+    background-color: #7FCDCD;
+}
+.checkoutBtn {
+    font-size: 12px !important;
+    text-transform: uppercase !important;
+}
+
+ @media screen and (max-width: 425px) {
+ .headerRow {
+    margin-left: 0;
+    margin-right: 0;
+}
+    .headerLogo {
+        width: 100%;
+    }
+ }
