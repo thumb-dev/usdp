@@ -18,5 +18,6 @@ four51.app = angular.module('451order', [
     'OrderCloud-AnonRouter',
     'OrderCloud-SpecForms',
     'OrderCloud-CategoryCollapse',
-    'OrderCloud-HamburgerNavigation'
+    'OrderCloud-HamburgerNavigation',
+    'OrderCloud-HeaderNavigation'
 ]);
