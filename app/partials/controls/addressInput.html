@@ -2,7 +2,7 @@
     <div class="view-form-icon" ng-hide="address.IsCustEditable == false">
         <div>
             <label for="Autocomplete">{{'Google Address Quick Search' | r | xlat}}</label>
-            <input type="text" id="Autocomplete" class="form-control" details="addressobj" placeholder="{{'Enter a location' | r | xlat}}" ng-autocomplete ng-model="addressresult" />
+            <input type="text" id="Autocomplete" class="form-control" details="addressobj" placeholder="{{'Enter a location' | r | xlat}}" ng-autocomplete ng-model="addressresult" onkeypress="isAlphaNum(event);"/>
             <i class="fa fa-map-marker"></i>
         </div>
     </div>
@@ -11,7 +11,7 @@
         <div class="row view-form-icon">
             <div>
                 <label>{{('Address' | r) + ' ' + ('Nickname (i.e. Home or Office)' | r) | xlat}}</label>
-                <input name="addressname" class="form-control" type="text" ng-model="address.AddressName" placeholder="{{('Address' | r) + ' ' + ('Name' | r) | xlat}}" autocomplete="off" ng-required="address.IsCustEditable != false" ng-disabled="address.IsCustEditable == false" />
+                <input name="addressname" class="form-control" type="text" ng-model="address.AddressName" placeholder="{{('Address' | r) + ' ' + ('Name' | r) | xlat}}" autocomplete="off" ng-required="address.IsCustEditable != false" ng-disabled="address.IsCustEditable == false" onkeypress="isAlphaNum(event);"/>
                 <i class="fa fa-edit"></i>
             </div>
         </div>
