@@ -36,6 +36,11 @@ function ($scope, $routeParams, $location, $filter, $rootScope, $451, User, Orde
 
 	$scope.hasOrderConfig = OrderConfig.hasConfig($scope.currentOrder, $scope.user);
 	$scope.checkOutSection = $scope.hasOrderConfig ? 'order' : 'shipping';
+	
+		$scope.atkinsOrderFields = {};
+	    angular.forEach($scope.currentOrder.OrderFields, function(field){
+		$scope.atkinsOrderFields[field.Name] = field;
+	    });
 
     function submitOrder() {
 	    $scope.displayLoadingIndicator = true;
