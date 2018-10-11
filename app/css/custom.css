@@ -17,6 +17,9 @@ Template: Howdy
 .headerLogo {
     width: 100%;
 }
+.btn-default .badge {
+    background:red;
+}
 
 .headerRow {
     margin-left: 14%;
@@ -41,6 +44,9 @@ Template: Howdy
     border-bottom-left-radius: 4px;
     border-top-left-radius: 4px;
 }
+.navbar .container .navbar-nav.pull-right li a i:first-of-type {
+    border-color:white;
+}
 
 .mainContainer {
     padding-right: 15%;
@@ -48,16 +54,22 @@ Template: Howdy
 }
 
 .navItemsHover:hover {
-    background: #49C5B1;
+    background: #127195;
     // color: #333333 !important;
 }
 .navbar-nav li.dropdown li > a {
-    color: white;
+    color: white !important;
 }
-.dropdown-menu, .dropdown-mega .dropdown-menu {
-    background-color: #49C5B1;
+.navbar-nav li.dropdown li > a:hover {
+    color: white !important;
 }
 
+.dropdown-menu, .dropdown-mega .dropdown-menu:hover {
+    background-color: #127195;
+}
+.dropdown-menu, .dropdown-mega .dropdown-menu:hover {
+    background-color: #1aa5d9;
+}
 .panel-category-list ul li a img {
     margin: 0 auto;
     max-height: 250px;
@@ -72,11 +84,14 @@ Template: Howdy
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
     color: #ffffff;
-    background-color: #49C5B1;
+    background-color: #127195;
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-    background-color: #49C5B1;
+    background-color: #127195;
     color: #ffffff;
+}
+.container .navbar-nav li a {
+    color:white;
 }
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus,
@@ -141,6 +156,9 @@ Template: Howdy
 .carousel-control .icon-next, .carousel-control .glyphicon-chevron-right {
    
 }
+.navbar-nav li.dropdown li:hover {
+    background-color: #127195 !important;
+}
 
 /* ------------------- Section Styling - Not needed for carousel styling ------------------- */
 .shellAnchor:hover .shellColor, 
@@ -152,21 +170,37 @@ Template: Howdy
 
 
 .btn-info {
-    border-color: #296880;
-    background-color: #296880;
+    border-color: #1aa5d9;
+    background-color: #1aa5d9;
 }
 .btn-info:hover {
-    border-color: #7FCDCD;
-    background-color: #7FCDCD;
+    border-color: #127195;
+    background-color: #127195;
 }
 .logonBtn:hover {
-    border-color: #7FCDCD;
-    background-color: #7FCDCD;
+    border-color: #127195;
+    background-color: #127195;
 }
 .checkoutBtn {
     font-size: 12px !important;
     text-transform: uppercase !important;
 }
+ .jobTaskNumber {
+    font-size: 20px;
+    padding-top: 40px;
+    }
+
+ @media screen and (max-width: 1024px) {
+ .jobTaskNumber {
+    font-size:15px;
+    }
+ }
+ 
+  @media screen and (max-width: 768px) {
+ .jobTaskNumber {
+    padding-top:20px;
+    }
+ }
 
  @media screen and (max-width: 425px) {
  .headerRow {
