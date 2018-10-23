@@ -21,5 +21,7 @@ four51.app = angular.module('451order', [
     'OrderCloud-HamburgerNavigation',
     'OrderCloud-HeaderNavigation',
     'OrderCloud-LargeAddressListSearch',
-    'OrderCloud-ProductLightbox'
+    'OrderCloud-ProductLightbox',
+    'OrderCloud-ProductSearchInput',
+    'OrderCloud-Breadcrumbs'
 ]);
