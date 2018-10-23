@@ -1,6 +1,6 @@
 <section>
     <nav id="451qa_nav_hdr" class="nav">
-        <ul>
+        <!--<ul>
             <li class="hidden-sm hidden-xs">
                 <span ng-click="toggleNav()"><i class="fa fa-bars" ng-class="{ 'text-info': navStatus.visible }"></i></span>
             </li>
@@ -12,7 +12,7 @@
                     <span><i class="fa fa-search text-primary"></i></span>
                 </a>
             </li>
-        </ul>
+        </ul>-->
     </nav>
     <div class="row">
         <aside class="col-md-3 visible-md visible-lg" ng-if="navStatus.visible">
@@ -30,6 +30,8 @@
             </div>
         </aside>
         <div ng-class="{ 'col-md-9': navStatus.visible, 'col-md-12': !navStatus.visible }" >
+        
+            <breadcrumbs></breadcrumbs>
 
             <categorylistview></categorylistview>
 
