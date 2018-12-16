@@ -24,7 +24,7 @@
                                     ng-options="address.ID as address.AddressName for address in billaddresses | filter:{IsBilling:true}" ng-model="currentOrder.BillAddressID" ng-required="currentOrder.BillingEnabled">
                                 <option value=""></option>
                             </select>
-                            <i class="fa fa-map-marker"></i>
+                            <!--<i class="fa fa-map-marker"></i>-->
                         </div>
                     </div>
                     <div class="order-location" ng-show="BillAddress">
