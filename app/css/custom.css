@@ -5,11 +5,22 @@ Version: 1.0
 Template: Howdy
 */
 
+
+body {
+    font-family: 'Montserrat', sans-serif !important;
+}
 .header-navigation {
     padding-top: 20px;
     padding-bottom: 20px;
 }
-
+.navbar-default {
+    background-color: #075080;
+    border-color: #075080;
+  }
+.wholeSiteBackground {
+     background-color: #C1C6C8; 
+  }
+  
 .marginTop {
     margin-top: 75px;
 }
@@ -58,7 +69,7 @@ Template: Howdy
 }
 
 .navItemsHover:hover {
-    background: #468104;
+    background: #81C342;
     // color: #333333 !important;
 }
 .navbar-nav li.dropdown li > a {
@@ -69,10 +80,10 @@ Template: Howdy
 }
 
 .dropdown-menu, .dropdown-mega .dropdown-menu:hover {
-    background-color: #468104;
+    background-color: #81C342;
 }
 .dropdown-menu, .dropdown-mega .dropdown-menu:hover {
-    background-color: #002c5f;
+    background-color: #81C342;
 }
 .panel-category-list ul li a img {
     margin: 0 auto;
@@ -88,10 +99,10 @@ Template: Howdy
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
     color: #ffffff;
-    background-color: #468104;
+    background-color: #81C342;
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-    background-color: #468104;
+    background-color: #81C342;
     color: #ffffff;
 }
 .container .navbar-nav li a {
@@ -161,7 +172,7 @@ Template: Howdy
 
 }
 .navbar-nav li.dropdown li:hover {
-    background-color: #468104 !important;
+    background-color: #81C342 !important;
 }
 
 /* ------------------- Section Styling - Not needed for carousel styling ------------------- */
@@ -196,16 +207,24 @@ Template: Howdy
 
 
 .btn-info {
-    border-color: #002c5f;
-    background-color: #002c5f;
+    border-color: #1CA9E1;
+    background-color: #1CA9E1;
+}
+.btn-info {
+    border-color: #075080;
+    background-color: #075080;
 }
 .btn-info:hover {
-    border-color: #468104;
-    background-color: #468104;
+    border-color: #1CA9E1;
+    background-color: #1CA9E1;
+}
+.logonBtn {
+    border-color: #0E5D56;
+    background-color: #0E5D56;
 }
 .logonBtn:hover {
-    border-color: #468104;
-    background-color: #468104;
+    border-color: #81C342;
+    background-color: #81C342;
 }
 .checkoutBtn {
     font-size: 12px !important;
