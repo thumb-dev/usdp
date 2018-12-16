@@ -58,14 +58,14 @@
                                 <p ng-show="(orderShipAddress.FirstName || orderShipAddress.LastName) && (!user.Permissions.contains('EditShipToName') && !orderShipAddress.IsCustEditable)">
                                     <small>{{orderShipAddress.FirstName + ' ' + orderShipAddress.LastName}}</small>
                                 </p>
-                                <div class="row" ng-show="!currentOrder.IsMultipleShip() && user.Permissions.contains('EditShipToName') && (orderShipAddress && !orderShipAddress.IsCustEditable)">
-                                    <div class="col-sm-2">
-                                         <input class="form-control" type="text" ng-model="currentOrder.LineItems[0].ShipFirstName" placeholder="{{('First' | r) + ' ' + ('Name' | r) | xlat}}" onkeypress="isAlphaNum(event);"/>
-                                    </div>
-                                    <div class="col-sm-2">
-                                        <input class="form-control" type="text" ng-model="currentOrder.LineItems[0].ShipLastName" placeholder="{{('Last' | r) + ' ' + ('Name' | r) | xlat}}" onkeypress="isAlphaNum(event);"/>
-                                    </div>
-                                </div>
+		<div class="row" ng-show="!currentOrder.IsMultipleShip() && user.Permissions.contains('EditShipToName') && (orderShipAddress && !orderShipAddress.IsCustEditable)">
+			<div class="col-sm-4">
+				<input class="form-control" type="text" ng-model="currentOrder.LineItems[0].ShipFirstName" placeholder="{{('First' | r) + ' ' + ('Name' | r) | xlat}}" ng-required="!currentOrder.IsMultipleShip() && user.Permissions.contains('EditShipToName') && (orderShipAddress && !orderShipAddress.IsCustEditable)" />
+			</div>
+			<div class="col-sm-4">
+				<input class="form-control" type="text" ng-model="currentOrder.LineItems[0].ShipLastName" placeholder="{{('Last' | r) + ' ' + ('Name' | r) | xlat}}" ng-required="!currentOrder.IsMultipleShip() && user.Permissions.contains('EditShipToName') && (orderShipAddress && !orderShipAddress.IsCustEditable)" />
+			</div>
+		</div>
                                 <p ng-show="orderShipAddress.Street1"><small>{{orderShipAddress.Street1}}</small></p>
                                 <p ng-show="orderShipAddress.Street2"><small>{{orderShipAddress.Street2}}</small></p>
                                 <p ng-show="orderShipAddress.City || orderShipAddress.State || order.ShipAddress.Zip">
