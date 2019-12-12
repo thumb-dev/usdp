@@ -10,8 +10,8 @@
 
         <div class="row view-form-icon">
             <div>
-                <label>{{('Address' | r) + ' ' + ('Nickname (i.e. Home or Office)' | r) | xlat}}</label>
-                <input name="addressname" class="form-control" type="text" ng-model="address.AddressName" placeholder="{{('Address' | r) + ' ' + ('Name' | r) | xlat}}" autocomplete="off" ng-required="address.IsCustEditable != false" ng-disabled="address.IsCustEditable == false" onkeypress="isAlphaNum(event);"/>
+                <label>{{('Department' | r) + ' ' + ('Number' | r) | xlat}}</label>
+                <input name="addressname" class="form-control" type="text" ng-model="address.AddressName" placeholder="{{('Department' | r) + ' ' + ('Number' | r) | xlat}}" autocomplete="off" ng-required="address.IsCustEditable != false" ng-disabled="address.IsCustEditable == false" onkeypress="isAlphaNum(event);"/>
                 <i class="fa fa-edit"></i>
             </div>
         </div>
