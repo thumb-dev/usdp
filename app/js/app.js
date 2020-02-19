@@ -23,5 +23,6 @@ four51.app = angular.module('451order', [
     'OrderCloud-LargeAddressListSearch',
     'OrderCloud-ProductLightbox',
     'OrderCloud-ProductSearchInput',
-    'OrderCloud-Breadcrumbs'
+    'OrderCloud-Breadcrumbs',
+    'OrderCloud-SameAsShippingCheckbox'
 ]);
