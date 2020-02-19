@@ -20,7 +20,7 @@
                     </div>
                     <div class="panel-body">
                         <orderhistorydetails></orderhistorydetails>
-                        <orderhistorysummary ng-if="!(user.Permissions.contains('HidePricing'))"></orderhistorysummary>
+                        <orderhistorysummary ng-if="!(user.Permissions.contains('HidePricing'))" ng-hide="order.LineItems[0].Product.InteropID === 'CDC-APP-KIT-001' || order.LineItems[0].Product.Name === 'New Hire Kit'"></orderhistorysummary>
                     </div>
                     <div class="panel-footer" ng-if="order.FromUserID == user.ID && order.Status != 'Unsubmitted'">
                         <button ng-disabled="currentOrder" class="btn btn-primary pull-right" ng-click="repeatOrder()">
