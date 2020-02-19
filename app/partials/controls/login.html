@@ -1,82 +1,94 @@
-<div class="login" style="overflow:hidden; max-height: 600px;">
-    <div class="order-cloud-image img-responsive wholeSiteBackground" style=""></div>
-    <section class="order-cloud">
-        <div id="login_box">
-            <div id="login_form" class="animated bounceIn">
-                <form class="form-signin" ng-submit="login()" name="login_form" style="background:none no-repeat scroll 0% 0%;border: 1px solid lightgray;background:white;">
-                    <p class="animated fadeIn text-center"><img src="https://thumbprint.com/four51_images/AHMG/AHMG_logo.jpg" height="80%" width="80%" style="margin-left: 30px;" /></p>
-                    <p id="451qa_msg_login" ng-show="loginMessage" ng-bind-html="loginMessage" class="alert alert-info"></p>
-                    <div>
-                        <div class="view-form-icon" ng-show="!showEmailHelp && !PasswordReset">
-                            <div>
-                                <label ng-show="credentials.Username">{{'Username' | r}}</label>
-                                <input autofocus class="form-control" type="text" ng-model="credentials.Username" placeholder="{{'Username' | r}}" />
-                                <i class="fa fa-user"></i>
-                            </div>
-                            <div ng-show="!PasswordSecurityException">
-                                <label ng-show="credentials.Password">{{'Password' | r}}</label>
-                                <input class="form-control" type="password" ng-model="credentials.Password" placeholder="{{'Password' | r}}" />
-                                <i class="fa fa-lock"></i>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="alert alert-info" ng-show="showEmailHelp && (!EmailNotFoundException || !PasswordSecurityException)">
-                                If you would like to be reminded of your {{'Username' | r}} or have the option to reset your {{'Password' | r}}, please provide your email address and your log on information will be emailed to you immediately.
-                            </p>
-                            <btn class="btn btn-info btn-block helpBtn" ng-show="!showEmailHelp && !PasswordReset && !EmailNotFoundException && !PasswordSecurityException" ng-click="showEmailHelp = !showEmailHelp; buttonText = 'Submit'">
-                                Need help logging on?
-                            </btn>
-                            <div class="view-form-icon" ng-show="showEmailHelp">
-                                <div>
-                                    <label ng-show="credentials.Email">{{'Email' | r}}</label>
-                                    <input class="form-control" type="email" ng-model="credentials.Email" placeholder="{{'Email' | r}}" />
-                                    <i class="fa fa-envelope"></i>
-                                </div>
-                            </div>
-                            <btn class="btn btn-info btn-block" ng-show="showEmailHelp" ng-click="showEmailHelp = !showEmailHelp; buttonText = 'Logon'">
-                                Return to logon
-                            </btn>
-                        </div>
-                        <div>
-                            <div class="view-form-icon" ng-show="PasswordSecurityException">
-                                <div>
-                                    <label ng-show="credentials.CurrentPassword">Current {{'Password' | r}}</label>
-                                    <input class="form-control" name="current_password" type="password" ng-model="credentials.CurrentPassword" placeholder="Current {{'Password' | r}}" />
-                                    <i class="fa fa-lock"></i>
-                                </div>
-                                <div>
-                                    <label ng-show="credentials.NewPassword">New {{'Password' | r}}</label>
-                                    <input class="form-control" name="new_password" type="password" ng-model="credentials.NewPassword" placeholder="New {{'Password' | r}}" />
-                                    <i class="fa fa-lock"></i>
-                                </div>
-                                <div>
-                                    <label ng-show="credentials.ConfirmPassword">Confirm {{'Password' | r}}</label>
-                                    <input class="form-control" name="confirm_password" type="password" ng-model="credentials.ConfirmPassword"  placeholder="Confirm {{'Password' | r}}" ng-match="credentials.NewPassword" />
-                                    <i class="fa fa-lock"></i>
-                                    <inlineerror ng-show="login_form.confirm_password.$error.match" title="{{'Password' | r}} do not match!" />
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="view-form-icon" ng-show="PasswordReset">
-                                <div>
-                                    <label ng-show="credentials.NewPassword">New {{'Password' | r}}</label>
-                                    <input class="form-control" ng-required="PasswordReset" name="new_password" type="password" ng-model="credentials.NewPassword" placeholder="New {{'Password' | r}}" />
-                                    <i class="fa fa-lock"></i>
-                                </div>
-                                <div>
-                                    <label ng-show="credentials.ConfirmPassword">Confirm {{'Password' | r}}</label>
-                                    <input class="form-control" ng-required="PasswordReset" name="confirm_password" type="password" ng-model="credentials.ConfirmPassword"  placeholder="Confirm {{'Password' | r}}" ng-match="credentials.NewPassword" />
-                                    <i class="fa fa-lock"></i>
-                                    <inlineerror ng-show="login_form.confirm_password.$error.match" title="{{'Password' | r}} do not match!" />
-                                </div>
-                            </div>
-                        </div>
-                        <input ng-disabled="login_form.$invalid" class="btn btn-large btn-primary btn-block logonBtn" id="451_btn_login" type="submit" value="{{buttonText}}" />
-                    </div>
-                    <a class="btn btn-info btn-block userBtnText" href="https://register.ahmgmarket.com" style="text-decoration: none;">REGISTER</a>
-                </form>
+<div class="login" style="overflow:hidden;">
+  <div class="order-cloud-image img-responsive wholeSiteBackground" style=""></div>
+  <section class="order-cloud">
+    <div id="login_box">
+      <div id="login_form" class="animated bounceIn">
+        <form class="form-signin" ng-submit="login()" name="login_form" style="background:none no-repeat scroll 0% 0%;border: 1px solid lightgray;background:white;">
+          <p class="animated fadeIn text-center"><img src="https://thumbprint.com/four51_images/o2bkids/O2Bkids-logo-color.png" height="80%" width="80%" style="margin-left: 30px;" /></p>
+          <p id="451qa_msg_login" ng-show="loginMessage" ng-bind-html="loginMessage" class="alert alert-info"></p>
+          <div>
+            <div class="view-form-icon" ng-show="!showEmailHelp && !PasswordReset">
+              <div>
+                <label ng-show="credentials.Username">{{'Username' | r}}</label>
+                <input autofocus class="form-control" type="text" ng-model="credentials.Username" placeholder="{{'Username' | r}}" />
+                <i class="fa fa-user"></i>
+              </div>
+              <div ng-show="!PasswordSecurityException">
+                <label ng-show="credentials.Password">{{'Password' | r}}</label>
+                <input class="form-control" type="password" ng-model="credentials.Password" placeholder="{{'Password' | r}}" />
+                <i class="fa fa-lock"></i>
+              </div>
             </div>
-        </div>
-    </section>
+            <div>
+              <p class="alert alert-info" ng-show="showEmailHelp && (!EmailNotFoundException || !PasswordSecurityException)">
+                If you would like to be reminded of your {{'Username' | r}} or have the option to reset your {{'Password' | r}}, please provide your email address and your log on information will be emailed to you immediately.
+              </p>
+              <btn class="btn btn-info btn-block helpBtn" ng-show="!showEmailHelp && !PasswordReset && !EmailNotFoundException && !PasswordSecurityException" ng-click="showEmailHelp = !showEmailHelp; buttonText = 'Submit'">
+                Need help logging on?
+              </btn>
+              <div class="view-form-icon" ng-show="showEmailHelp">
+                <div>
+                  <label ng-show="credentials.Email">{{'Email' | r}}</label>
+                  <input class="form-control" type="email" ng-model="credentials.Email" placeholder="{{'Email' | r}}" />
+                  <i class="fa fa-envelope"></i>
+                </div>
+              </div>
+              <btn class="btn btn-info btn-block" ng-show="showEmailHelp" ng-click="showEmailHelp = !showEmailHelp; buttonText = 'Logon'">
+                Return to logon
+              </btn>
+            </div>
+            <div>
+              <div class="view-form-icon" ng-show="PasswordSecurityException">
+                <div>
+                  <label ng-show="credentials.CurrentPassword">Current {{'Password' | r}}</label>
+                  <input class="form-control" name="current_password" type="password" ng-model="credentials.CurrentPassword" placeholder="Current {{'Password' | r}}" />
+                  <i class="fa fa-lock"></i>
+                </div>
+                <div>
+                  <label ng-show="credentials.NewPassword">New {{'Password' | r}}</label>
+                  <input class="form-control" name="new_password" type="password" ng-model="credentials.NewPassword" placeholder="New {{'Password' | r}}" />
+                  <i class="fa fa-lock"></i>
+                </div>
+                <div>
+                  <label ng-show="credentials.ConfirmPassword">Confirm {{'Password' | r}}</label>
+                  <input class="form-control" name="confirm_password" type="password" ng-model="credentials.ConfirmPassword" placeholder="Confirm {{'Password' | r}}" ng-match="credentials.NewPassword" />
+                  <i class="fa fa-lock"></i>
+                  <inlineerror ng-show="login_form.confirm_password.$error.match" title="{{'Password' | r}} do not match!" />
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="view-form-icon" ng-show="PasswordReset">
+                <div>
+                  <label ng-show="credentials.NewPassword">New {{'Password' | r}}</label>
+                  <input class="form-control" ng-required="PasswordReset" name="new_password" type="password" ng-model="credentials.NewPassword" placeholder="New {{'Password' | r}}" />
+                  <i class="fa fa-lock"></i>
+                </div>
+                <div>
+                  <label ng-show="credentials.ConfirmPassword">Confirm {{'Password' | r}}</label>
+                  <input class="form-control" ng-required="PasswordReset" name="confirm_password" type="password" ng-model="credentials.ConfirmPassword" placeholder="Confirm {{'Password' | r}}" ng-match="credentials.NewPassword" />
+                  <i class="fa fa-lock"></i>
+                  <inlineerror ng-show="login_form.confirm_password.$error.match" title="{{'Password' | r}} do not match!" />
+                </div>
+              </div>
+            </div>
+            <input ng-disabled="login_form.$invalid" class="btn btn-large btn-primary btn-block logonBtn" id="451_btn_login" type="submit" value="{{buttonText}}" />
+          </div>
+          <div class="" style="text-align:center;border-top: 1px solid #773dbd;padding-top: 15px;">
+            <span style="color:#773dbd;">Need an account? Click here to register.</span>
+          </div>
+          
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <a class="btn btn-info btn-block userBtnText" href="https://www.four51.com/ui/AutoLogon.hcf?id=9d2525ed-767a-452c-8134-c2316dab6ab8" style="text-decoration: none;">Parents and Family</a>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <a class="btn btn-info btn-block userBtnText" href="https://www.four51.com/ui/AutoLogon.hcf?id=8a552934-6f1f-4e46-b6b4-f630db96d280" style="text-decoration: none;">Staff Only</a>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </section>
 </div>
