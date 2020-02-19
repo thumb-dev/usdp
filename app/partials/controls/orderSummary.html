@@ -4,7 +4,7 @@
             {{('Checkout' | r) + ' ' + ('Summary' | r) | xlat}}
         </h3>
     </div>
-    <div class="panel-body">
+    <div class="panel-body" ng-hide="hidePrices === true">
         <loadingindicator ng-show="couponLoadingIndicator" title="{{'Please wait while we verify and apply your promotion code' | r | xlat}}" />
         <loadingindicator ng-show="couponRemoveIndicator" title="{{'Please wait while we remove your promotion code' | r | xlat}}" />
         <orderconfirmationmessage />
