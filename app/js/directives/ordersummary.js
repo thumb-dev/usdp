@@ -11,6 +11,24 @@ four51.app.directive('ordersummary', ['Order', 'Coupon', function(Order, Coupon)
 					}
 				);
 			};
+			
+	var hidePrices = false;
+    
+    for (var i = $scope.currentOrder.LineItems.length - 1; i >= 0; i--) {
+      var itemID = $scope.currentOrder.LineItems[i].Product.InteropID;
+      if ($scope.currentOrder.LineItems[i].Product.StaticSpecGroups != null && $scope.currentOrder.LineItems[i].Product.StaticSpecGroups.HidePrice != null) {
+        var staticSpeHide= $scope.currentOrder.LineItems[i].Product.StaticSpecGroups.HidePrice.Specs.Item.Value;
+      }
+
+      if (staticSpeHide === "true") {
+        hidePrices = true;
+        break;
+      } else {
+        hidePrices = false;
+        break;
+      }
+    }
+    $scope.hidePrices = hidePrices;
 
 			$scope.applyCoupon = function() {
 				// COMTOOLS-149
