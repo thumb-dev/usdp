@@ -18,11 +18,10 @@ function productsearchinput() {
         return [
             '<form name="productSearchInput" ng-submit="executeSearch()">',
             '<div class="view-form-icon searchFieldForm">',
-            '<div class="input-group searchField" style="margin:10px 0 0;">',
+            '<div class="input-group searchField" style="margin-top:3%;">',
             '<input type="text" class="form-control searchInput" placeholder="{{\'Search\' | r}} {{\'Products\' | r}}" ng-model="productSearchTerm"/>',
-            '<i class="fa fa-search"></i>',
             '<span class="input-group-btn">',
-            '<button type="submit" class="btn btn-primary searchButton" ng-disabled="productSearchTerm == null || productSearchTerm == \'\'">{{\'Search\' | r}}</button>',
+            '<button type="submit" class="btn btn-primary searchButton" ng-disabled="productSearchTerm == null || productSearchTerm == \'\'"><i class="fa fa-search"></i></button>',
             '</span>',
             '</div>',
             '</div>',
