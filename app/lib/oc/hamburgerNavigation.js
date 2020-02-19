@@ -21,7 +21,7 @@ function hamburgernavigation() {
         return [
             '<style>',
             //color changes start
-            '.navbar-hamburger .main-toggle i {color:#fff;}',
+            '.navbar-hamburger .main-toggle i {color:#510588;}',
             'ul.burgers {margin:0; width:100%;}',
             //color changes end
             'accountnavigation {display:none !important;}',
