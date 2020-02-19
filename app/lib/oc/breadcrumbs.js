@@ -19,7 +19,7 @@ function breadcrumbs() {
         return [
             '<style>',
             '.breadcrumbs {margin-left: 5px;}',
-            '.breadcrumb {margin-bottom:0px;padding-top:0;padding-left:15px;padding-right;15px;padding-botton:14px;background-color: transparent;}',
+            '.breadcrumb {padding-top:40px;padding-left:15px;padding-right;15px;padding-botton:20px;background-color: transparent;}',
             '.breadcrumb a{color: #333333;}',
             '.breadcrumbs li:last-child a{font-weight:bold;}',
             '</style>',
