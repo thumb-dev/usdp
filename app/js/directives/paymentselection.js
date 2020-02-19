@@ -11,6 +11,12 @@ four51.app.directive('paymentselector', function() {
 		       if ($scope.currentOrder && $scope.currentOrder.BudgetAccountID)
 		            budgetAccountCalculation($scope.currentOrder.BudgetAccountID);
 	       });
+	       
+	       if($scope.cartCC == true){
+              $scope.currentOrder.PaymentMethod = 'CreditCard';
+           } else if ($scope.cartCC == false) { 
+               $scope.currentOrder.PaymentMethod = 'PurchaseOrder';
+           }
 
 	       $scope.$watch('currentOrder.PaymentMethod', function(event) {
 		       if (event == 'BudgetAccount' && $scope.SpendingAccounts) {
