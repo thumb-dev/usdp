@@ -10,13 +10,12 @@
                         <figure ng-show="c.Image.URL">
                         <div class="categoryImages">
                             <img class="img-responsive shell shellColor" ng-src="{{c.Image.URL}}"/>
-                            </div>
                         </figure>
                         <div class="empty" ng-show="!c.Image.URL">
                             <span class="fa empty"><i class="fa fa-camera"></i></span>
                         </div>
                         <div class="hvrbox-layer_top">
-                        <h5 class="catName" ng-bind-html="c.Name" style="" />
+                        <!--<h5 class="catName" ng-bind-html="c.Name" style="" />-->
                       </div>
                     </a>
                 </div>
@@ -25,4 +24,3 @@
     </nav>
     </div>
 </div>
-
