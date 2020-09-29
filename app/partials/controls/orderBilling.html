@@ -1,9 +1,31 @@
-<div class="panel panel-default panel-order">
-    <div class="panel-heading" ng-class="{'no': cart_billing.$invalid, 'yes': !cart_billing.$invalid, 'open': checkOutSection == 'billing' }">
+<style>
+  .checkout-title {
+    color: #208fad;
+    font-family: 'Lato',sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: -0.74px;
+    padding-right: 10px;
+  }
+  .checkout-circle {
+    padding-top: 10px;
+    padding-right: 10px;
+  }
+.checkout-container {
+  background-color: none;
+  border-color: none;
+  border-bottom: 1px solid #979797;
+}
+.checkout-textarea {
+  background: #F9F4FF;
+}
+</style>
+<div class="panel-order">
+    <div class="panel-heading checkout-container" ng-class="{'no': cart_billing.$invalid, 'yes': !cart_billing.$invalid, 'open': checkOutSection == 'billing' }" style="background-color: white;">
         <h3 ng-click="checkOutSection = 'billing'" class="panel-title">
-            <i class="pull-left" ng-class="{'fa fa-warning': cart_billing.$invalid, 'fa fa-check-circle': !cart_billing.$invalid }"></i>
-            {{'Billing' | r | xlat}}
-            <i class="pull-right" ng-class="{'fa fa-caret-up': checkOutSection == 'billing', 'fa fa-caret-down': checkOutSection == 'shipping' || checkOutSection == 'order' }"></i>
+            <i class="pull-left checkout-circle" ng-class="{'fa fa-warning': cart_billing.$invalid, 'fa fa-check-circle': !cart_billing.$invalid }"></i>
+            <span class="checkout-title">{{'Billing' | r | xlat}}</span>
+            <i class="" style="color: #4E2683;" ng-class="{'fa fa-caret-up': checkOutSection == 'billing', 'fa fa-caret-down': checkOutSection == 'shipping' || checkOutSection == 'order' }"></i>
         </h3>
     </div>
     <div collapse="checkOutSection != 'billing'" class="panel-body">
@@ -36,11 +58,11 @@
                             <small>{{BillAddress.FirstName + ' ' + BillAddress.LastName}}</small>
                         </p>
                         <div class="row" ng-show="user.Permissions.contains('EditBillToName') && !BillAddress.IsCustEditable">
-                            <div class="col-sm-2">
+                            <div class="col-sm-4">
                                 <input class="form-control" name="billingFirstName" ng-required="currentOrder.BillingEnabled && user.Permissions.contains('EditBillToName') && !BillAddress.IsCustEditable" type="text" ng-model="currentOrder.BillFirstName"
                                        placeholder="{{('First' | r) + ' ' + ('Name' | r) | xlat}}" autocomplete="off" onkeypress="isAlphaNum(event);"/>
                             </div>
-                            <div class="col-sm-2">
+                            <div class="col-sm-4">
                                 <input class="form-control" name="billingLastName" ng-required="currentOrder.BillingEnabled && user.Permissions.contains('EditBillToName') && !BillAddress.IsCustEditable" type="text" ng-model="currentOrder.BillLastName"
                                        placeholder="{{('Last' | r) + ' ' + ('Name' | r) | xlat}}"  onkeypress="isAlphaNum(event);"/>
                             </div>
