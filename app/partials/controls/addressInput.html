@@ -115,7 +115,7 @@
         <p class="alert alert-warning text-center" ng-show="addressEdit.isShipping.$invalid || addressEdit.isBilling.$invalid">
             {{'An address must be saved to the shipping, billing or both address books.' | r | xlat}}
         </p>
-        <div class="panel-footer">
+        <div class="panel-footer" style="background: none;">
             <span class="alert alert-warning" ng-show="objectExists">{{'An address with that name already exists. Please specify another name' | r | xlat}}</span><br />
             <button ng-if="(user.Permissions.contains('CreateShipToAddress') || user.Permissions.contains('CreateBillToAddress')) && address.IsCustEditable" class="btn btn-danger" ng-click="delete()" type="button">{{'Delete' | r | xlat}}</button>
             <button class="btn btn-warning" type="button" ng-click="cancel()">{{'Cancel' | r | xlat}}</button>
