@@ -1,20 +1,35 @@
+<style>
+  .cart-title {
+    color: #208fad;
+    font-family: 'Lato',sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: -0.74px;
+    line-height: 63px;
+  }
+  .standard-order {
+    border-bottom: 1px solid #dddddd;
+  }
+  </style>
 <section class="order-search-view marginTop">
-    <div class="panel panel-default" ng-if="!hasStandardTypes && !hasReplenishmentTypes && !hasPriceRequestTypes">
-        <div class="panel-heading">
+    <div class="panel-standard-order" ng-if="!hasStandardTypes && !hasReplenishmentTypes && !hasPriceRequestTypes">
+        <!--<div class="panel-heading">
             <h3 class="panel-title">{{'Orders' | r | xlat}}</h3>
-        </div>
+        </div>-->
+        <p class="cart-title standard-order">Orders</p>
         <div class="panel-body">
             <p class="alert alert-warning">{{'Your search resulted in no records. Please refine your search.' | r | xlat}}</p>
         </div>
-        <div class="panel-footer">
+        <div class="panel-footer" style="background: none;">
             <button type="button" class="btn btn-primary pull-right" redirect="catalog">{{'Continue Shopping' | r}}</button>
         </div>
     </div>
     <div class="order-types">
-        <div class="panel panel-default" ng-show="hasStandardTypes">
-            <div class="panel-heading">
+        <div class="panel-standard-order" ng-show="hasStandardTypes">
+            <!--<div class="panel-heading">
                 <h3 class="panel-title">{{('Standard' | r) + ' ' + ('Orders' | r) | xlat}}</h3>
-            </div>
+            </div>-->
+            <p class="cart-title standard-order">Standard Orders</p>
             <div class="panel-body">
                 <ul class="list-inline">
                     <li ng-repeat="criteria in OrderSearchCriteria | filter:{Type:'Standard'}" ng-show="criteria.Count">
@@ -48,9 +63,12 @@
             </div>
         </div>
     </div>
-    <div class="panel panel-default"ng-show="hasStandardTypes || hasReplenishmentTypes || hasPriceRequestTypes">
-        <div class="panel-heading">
-            <a data-toggle="collapse" data-target="#orderSearch" aria-expanded="true" aria-controls="orderSearch" style="width: 100%"><h3 class="panel-title" style="text-decoration: underline">{{('Search' | r) + ' ' + ('Orders' | r) | xlat}}</h3></a>
+    <div class=""ng-show="hasStandardTypes || hasReplenishmentTypes || hasPriceRequestTypes">
+        <div class="">
+            <a data-toggle="collapse" data-target="#orderSearch" aria-expanded="true" aria-controls="orderSearch" style="width: 100%;text-decoration: none;"><!--<h3 class="panel-title" style="text-decoration: underline">{{('Search' | r) + ' ' + ('Orders' | r) | xlat}}</h3>-->
+              <p class="cart-title standard-order">Search Orders</p>
+                <i class="" style="color: #4E2683;" ng-class="{'fa fa-caret-up': checkOutSection == 'shipping', 'fa fa-caret-down': checkOutSection == 'order' || checkOutSection == 'billing' }"></i>
+            </a>
         </div>
         <div class="panel-body" id="orderSearch">
             <div class="form-inline">
@@ -131,9 +149,9 @@
             </h3>
         </div>
     </div>
-    <div class="panel panel-default" ng-show="orders">
+    <div class="order-search-view" ng-show="orders">
         <div class="panel-heading">
-            <h3 class="panel-title">
+            <!--<h3 class="panel-title">
                 <span class="text-info" ng-show="orderSearchStat.Type">
                     {{(orderSearchStat.Type) + ' ' + ('Orders' | rl) | xlat}}:
                 </span>
@@ -141,7 +159,16 @@
                 <span ng-show="!orderSearchStat.Type">
                     {{'Search' | r | xlat}}
                 </span>
-            </h3>
+            </h3>-->
+            <p class="cart-title standard-order" style="font-size: 25px;">
+              <span class="text-info" ng-show="orderSearchStat.Type">
+                  {{(orderSearchStat.Type) + ' ' + ('Orders' | rl) | xlat}}:
+              </span>
+              {{orderSearchStat.DisplayName | r | xlat}}
+              <span ng-show="!orderSearchStat.Type">
+                  {{'Search' | r | xlat}}
+              </span>
+            </p>
         </div>
         <div class="">
             <loadingindicator ng-show="pagedIndicator" />
