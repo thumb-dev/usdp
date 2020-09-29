@@ -21,7 +21,7 @@ function hamburgernavigation() {
         return [
             '<style>',
             //color changes start
-            '.navbar-hamburger .main-toggle i {color:#510588;}',
+            '.navbar-hamburger .main-toggle i {color:#67cce9;}',
             'ul.burgers {margin:0; width:100%;}',
             //color changes end
             'accountnavigation {display:none !important;}',
@@ -39,7 +39,7 @@ function hamburgernavigation() {
             'ul.categories li ul li a, ul.account li a, ul.subcategories li a {color:#fff; font-size:95%; text-indent:5px;}',
             'ul.burgers .badge {margin-left:3px;}',
             '</style>',
-            '<header class="header navbar navbar-inner hidden-sm hidden-md hidden-lg">',
+            '<header class="header navbar navbar-inner hidden-md hidden-lg">',
             '<nav class="navbar navbar-default navbar-hamburger" role="navigation">',
             '<div>',
             '<a class="main-toggle" ng-click="isCollapsed = !isCollapsed" ng-class="{\'active\': !isCollapsed, \'\': isCollapsed}">',
