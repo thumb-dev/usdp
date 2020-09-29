@@ -1,102 +1,54 @@
-<!--<section class="jumbotron active" ng-class="{'active': isActive('catalog')}" style="padding: 0;margin:0;">
-    <div class="container bannerImage img-responsive">
+<style>
+  .caption {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  width: fit-content;
+  text-shadow: 0 0 8px rgba(0,0,0,.35);
+}
 
-        <h2 class="thumbnail" ng-show="Four51User.isAuthenticated()">
-            <a ng-click="refreshUser()" href="catalog">
-                <img class="img-responsive col-xs-12" ng-src="{{user.Company.LogoUrl}}" />
-            </a>
-        </h2>
-        <homemessage />
+.captionText {
+  font-size: 3.333rem;
+  line-height: 1.1;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+}
+@media screen and (max-width: 1300px) {
+  .caption {
+    left: 25%;
+  }
+  .captionText {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .captionText {
+    font-size: 40px;
+  }
+}
+
+</style>
+<div class="heroImage hidden-xs" ng-show="isActive('catalog')" style="">
+  <div class="home-banner">
+    <div class="caption">
+      <p class="captionText">Employee Resources</p>
     </div>
-</section>-->
+  </div>
+</div>
 
-<!--<section class="jumbotron " ng-class="{'active': isActive('catalog')}" style="padding: 0;margin:0;">
-	<div ng-class="{'active': isActive('catalog')}" style="">
-		<div class="AWMessage" style="">
-			<div class="alert alert-warning" role="alert" style="text-align:center;margin-top:20px;background:#c7aee5;">
-				<div class="container">
-					<span class="" data-target="#myModal-home" data-toggle="modal"><span style="cursor:pointer;color:#773dbd;"><strong>Click HERE </strong>for ordering tutorial</span></span>
-
-					<div class="modal fade" id="myModal-home" role="dialog">
-						<div class="modal-dialog pumaModalDialog" style="width: fit-content;">
-						
-							<div class="modal-content" style="">
-								<div class="modal-header"><button class="close" data-dismiss="modal" type="button">&times;</button>
-
-									<h4 class="modal-title">O2B Kids Video</h4>
-								</div>
-
-								<iframe class="modal-body" src="https://player.vimeo.com/video/350989379" width="640" height="592" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-
-								<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" style="width:100px;" type="button">Close</button></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section class="jumbotron " ng-class="{'active': isActive('catalog/o2b_o2b')}" style="padding: 0;margin:0;">
-	<div ng-class="{'active': isActive('catalog/o2b_o2b')}" style="">
-		<div class="AWMessage" style="">
-			<div class="alert alert-warning" role="alert" style="text-align:center;margin-top:20px;background:#c7aee5;">
-				<div class="container">
-					<span class="" data-target="#myModal-O2B" data-toggle="modal"><span style="cursor:pointer;color:#773dbd;"><strong>Click HERE </strong>for ordering tutorial</span></span>
-
-					<div class="modal fade" id="myModal-O2B" role="dialog">
-						<div class="modal-dialog pumaModalDialog" style="width: fit-content;">
-						
-							<div class="modal-content" style="">
-								<div class="modal-header"><button class="close" data-dismiss="modal" type="button">&times;</button>
-
-									<h4 class="modal-title">O2B Kids Video</h4>
-								</div>
-
-								<iframe class="modal-body" src="https://player.vimeo.com/video/350989379" width="640" height="592" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-
-								<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" style="width:100px;" type="button">Close</button></div>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section class="jumbotron " ng-class="{'active': isActive('catalog/o2b_palencia')}" style="padding: 0;margin:0;">
-	<div ng-class="{'active': isActive('catalog/o2b_palencia')}" style="">
-		<div class="AWMessage" style="">
-			<div class="alert alert-warning" role="alert" style="text-align:center;margin-top:20px;background:#c7aee5;">
-				<div class="container">
-					<span class="" data-target="#myModal-Pal" data-toggle="modal"><span style="cursor:pointer;color:#773dbd;"><strong>Click HERE </strong>for ordering tutorial</span></span>
-
-					<div class="modal fade" id="myModal-Pal" role="dialog">
-						<div class="modal-dialog pumaModalDialog" style="width: fit-content;">
-							
-							<div class="modal-content" style="">
-								<div class="modal-header"><button class="close" data-dismiss="modal" type="button">&times;</button>
-
-									<h4 class="modal-title">O2B Kids Video</h4>
-								</div>
-
-								<iframe class="modal-body" src="https://player.vimeo.com/video/350989379" width="640" height="592" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-
-								<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" style="width:100px;" type="button">Close</button></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>-->
-
+<div class="heroImage hidden-xs" ng-show="isActive('catalog/usdp_path')" style="">
+  <div class="path-banner">
+    <div class="caption">
+      <p class="captionText">Order Your<br/>Label Path REQ Forms</p>
+    </div>
+  </div>
+</div>
 
 
 <div class="product-search hidden-md hidden-lg">
-	<productsearchinput></productsearchinput>
+  <productsearchinput></productsearchinput>
 </div>
