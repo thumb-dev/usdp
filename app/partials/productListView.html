@@ -11,7 +11,7 @@
                 <i class="fa fa-sort"/>
             </div>
         </div>
-        <ul style="">
+        <ul style="display: flex;justify-content: center;flex-wrap: wrap;">
             <loadingindicator ng-show="searchLoading" title="{{'Please wait while we fetch all products' | r | xlat}}" />
             <li class="inline gallery" id="451_lst_prod" ng-repeat="product in products | paginate:(settings.currentPage-1) * settings.pageSize | limitTo:settings.pageSize | orderBy:sorter:direction" style="margin: 20px;">
                 <div class="well" style="border:none;border-radius: 30px;">
