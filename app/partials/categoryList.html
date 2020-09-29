@@ -3,8 +3,8 @@
     <loadingindicator ng-show="categoryLoadingIndicator" title="{{'Please wait while we fetch all categories' | r}}" />
     <div class="categoryList">
     <nav class="nav 451_lbl_subcatlist">
-        <ul class="cate">
-            <li class="col-lg-3 col-md-3 col-sm-12 col-xs-12 category-space" ng-repeat="c in currentCategory.SubCategories">
+        <ul class="cate" style="text-align: center;">
+            <li class="col-lg-4 col-md-4 col-sm-12 col-xs-12 category-space" ng-repeat="c in currentCategory.SubCategories">
                 <div class="hvrbox">
                     <a class="shellAnchor" ng-href="catalog/{{c.InteropID}}">
                         <figure ng-show="c.Image.URL">
