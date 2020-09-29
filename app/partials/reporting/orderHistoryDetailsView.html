@@ -1,4 +1,14 @@
-<div>
+<style>
+  .order-summary-body {
+    color: #000000;
+    font-family: 'Lato',sans-serif;
+    font-size: 20px;
+    letter-spacing: -0.37px;
+    line-height: 24px;
+    padding-bottom: 15px;
+  }
+</style>
+<div class="order-summary-body">
     <p ng-show="order.DateSubmitted">
         <span class="text-info">{{('Date' | r) + ' ' + ('Submitted' | r) | xlat}}</span>
         <span class="pull-right">{{order.DateSubmitted | date:user.Culture.DateFormat.short}}</span>
@@ -35,7 +45,7 @@
         <span class="text-info">{{'Cost Center' | r | xlat}}</span>
         <span class="pull-right">{{order.CostCenter}}</span>
     </p>
-    <hr />
+    <hr  style="border-top: 1px solid #979797;"/>
     <address ng-show="!order.IsMultipleShip()">
         <span class="text-primary"><strong>{{'Ship to' | r | xlat}}</strong></span><br />
         <div>
