@@ -1,10 +1,25 @@
+<style>
+  .cart-title {
+    color: #208fad;
+    font-family: 'Lato',sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: -0.74px;
+    line-height: 63px;
+  }
+  .standard-order {
+    border-bottom: 1px solid #dddddd;
+  }
+
+  </style>
 <section class="address-list-view marginTop">
     <loadingindicator ng-show="displayLoadingIndicator" />
     <accountnavigation />
-    <div class="panel panel-default">
-        <div class="panel-heading">
+    <div class="">
+        <!--<div class="panel-heading">
             <h3 class="panel-title">{{'Addresses' | r | xlat}}</h3>
-        </div>
+        </div>-->
+        <p class="cart-title standard-order">Addresses</p>
         <div class="panel-body">
                 <div class="view-form-icon">
                     <form name="searchForm" ng-submit="search()">
@@ -49,15 +64,16 @@
                         </table>
                     </div>
                 </div>
-                <div class="panel-footer" ng-show="addresses.length > 0">
-                <div ng-show="settings.listCount > settings.pageSize">
-                    <pagination page="settings.currentPage" max-size="8" rotate="false" boundary-links="true" total-items="settings.listCount"
-                                items-per-page="settings.pageSize" direction-links="true" previous-text="{{'Previous' | xlat}}" next-text="{{'Next' | xlat}}" first-text="{{'First' | xlat}}" last-text="{{'Last' | xlat}}"></pagination>
-                </div>
-                <button type="button" class="btn btn-danger" ng-click="deleteSelected($event)" ng-disabled="(addresses | filter:{Selected:true}).length == 0">{{('Delete' | r) + ' ' + ('Selected' | r) | xlat}}</button>
-                <button ng-if="user.Permissions.contains('CreateShipToAddress') || user.Permissions.contains('CreateBillToAddress')" type="button" class="btn btn-primary pull-right" ng-click="newAddress($event)">{{('New' | r) + ' ' + ('Address' | r) | xlat}}</button>
-            </div>
         </div>
+        <div class="" style="border-bottom: 1px solid #dddddd;padding-bottom:20px;" ng-show="addresses.length > 0">
+        <div ng-show="settings.listCount > settings.pageSize">
+            <pagination page="settings.currentPage" max-size="8" rotate="false" boundary-links="true" total-items="settings.listCount"
+                        items-per-page="settings.pageSize" direction-links="true" previous-text="{{'Previous' | xlat}}" next-text="{{'Next' | xlat}}" first-text="{{'First' | xlat}}" last-text="{{'Last' | xlat}}"></pagination>
+        </div>
+        <button type="button" class="btn btn-danger" ng-click="deleteSelected($event)" ng-disabled="(addresses | filter:{Selected:true}).length == 0">{{('Delete' | r) + ' ' + ('Selected' | r) | xlat}}</button>
+        <button ng-if="user.Permissions.contains('CreateShipToAddress') || user.Permissions.contains('CreateBillToAddress')" type="button" class="btn btn-primary pull-right" ng-click="newAddress($event)">{{('New' | r) + ' ' + ('Address' | r) | xlat}}</button>
+    </div>
+      
     </div>
     <div class="navbar-fixed-bottom">
         <loadingindicator ng-show="displayLoadingIndicator" />
