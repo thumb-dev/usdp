@@ -13,6 +13,11 @@
                         {{'Conditions of Use' | xlat}}
                     </a>
                 </span>
+                <span ng-if="!(user.Permissions.contains('HideTerms'))">
+                    <a class="btn btn-default btn-sm" href="https://www.iubenda.com/privacy-policy/71917948" target=”_blank”>
+                        {{'Privacy Policy' | xlat}}
+                    </a>
+                </span>
             </p>
         </div>
     </div>
