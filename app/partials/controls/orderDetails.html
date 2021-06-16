@@ -42,12 +42,15 @@
                     <i class="fa">#</i>
                 </div>
             </div>
-            <div class="view-form-icon" ng-if="user.Permissions.contains('Comments')">
+            <!--<div class="view-form-icon" ng-if="user.Permissions.contains('Comments')">
                 <div>
                     <label ng-show="currentOrder.Comments">{{'Comments' | r | xlat}}:</label>
                     <textarea class="form-control" rows="5" cols="100" ng-model="currentOrder.Comments" ng-attr-placeholder="{{'Comments (max character limit of 250)' | r | xlat}}..." maxlength="250"/>
                     <i class="fa fa-edit"></i>
                 </div>
+            </div>-->
+            <div class="alert alert-warning" role="alert" style="text-align:center;margin-bottom: 0;">
+              Any questions or requirements prior to placing your order, please click on the Chat button below or email us at <a href="mailto:hello@thumbprint.com">hello@thumbprint.com</a>. Once an order is placed, it is processed automatically.
             </div>
             <div class="view-form-icon" ng-show="user.Permissions.contains('CostCenterPerOrder') && !user.Permissions.contains('CostCenterPerLine') && user.CostCenters.length > 0 || user.Permissions.contains('CostCenterPerOrder') && user.Permissions.contains('FreeFormCostCenter')">
                 <div ng-class="{'view-form-select': !currentOrder.CostCenter && user.CostCenters.length > 1, '': currentOrder.CostCenter }">
