@@ -168,9 +168,7 @@ function CategoryModalCtrl($scope, $modal, $log, User, $timeout) {
 
   }];
         setTimeout(function() {
-          if ($scope.user.CustomFields[0].Value === null) {
             $scope.openCategory(500);
-          } 
         }, 500);
 
   }
