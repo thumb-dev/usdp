@@ -64,7 +64,7 @@ function CategoryModalCtrl($scope, $modal, $log, User, $timeout) {
         '</style>',
         '<div class="modal-header" style="padding:0;">',
         //Optional title in top header
-        '<img src="https://thumbprint.com/four51_images/Our-offices-will-be-closed-December-24th-January-2nd_v1.png" alt="Happy Holidays" style="width: -webkit-fill-available;border-top-left-radius: 6px;border-top-right-radius: 6px;">',
+        '<img src="https://thumbprint.com/four51_images/Our-offices-will-be-closed-December-24th-January-2nd_v1.png" alt="Happy Holidays" style="width: 100%;border-top-left-radius: 6px;border-top-right-radius: 6px;">',
         // '<h5 class="modal-title text-primary">Happy Holidays from all of us at Thumbprint!</i></h5>',
         //Optional close (x) in top header
         '<a class="pull-right close" ng-click="close()" style="top: 2px;">',
