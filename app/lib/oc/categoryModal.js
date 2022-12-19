@@ -148,8 +148,8 @@ function CategoryModalCtrl($scope, $modal, $log, User, $timeout) {
 
     $scope.close = function() {
       $modalInstance.close();
-      $scope.save();
-      console.log('checkbox value', $scope.user.CustomFields[0].Value);
+      // $scope.save();
+      // console.log('checkbox value', $scope.user.CustomFields[0].Value);
     };
 
     $scope.retarget = function(url) {
