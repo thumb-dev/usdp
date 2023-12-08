@@ -110,5 +110,5 @@ function ContentModalCtrl7($scope, $modal) {
         };
 
     }];
-$scope.open6(500);
+$scope.open7(500);
 }
