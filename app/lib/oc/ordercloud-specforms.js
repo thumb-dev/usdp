@@ -262,7 +262,7 @@ function ocselectionfield($451) {
             '<input class="form-control" type="text" ng-change="otherChanged()" ng-model="other" ng-show="customfield.isOtherSelected" autocomplete="off" ng-required="customfield.Required && customfield.isOtherSelected" />',
             '<span class="input-group-addon"  ng-if="customfield.Suffix && !hidesuffix && !((customfield.Suffix) == \'\')">{{customfield.Suffix}}</span>',
             '</div>',
-            '<i class="fa fa-edit"></i>',
+
             '</div>',
             '</div>'
         ].join('');
@@ -453,7 +453,8 @@ function ocdatefield($filter) {
             label: '@',
             hidesuffix: '@',
             hideprefix: '@',
-            format: '@'
+            format: '@',
+            options: '='
         },
         restrict: 'E',
         template: template,
@@ -476,7 +477,7 @@ function ocdatefield($filter) {
             '<label ng-class="{\'required\': customfield.Required}">{{label || customfield.Label || customfield.Name}}</label>',
             '<div ng-class="{\'input-group\':((customfield.Prefix && !hideprefix) || (customfield.Suffix && !hidesuffix))}">',
             '<span class="input-group-addon" ng-if="customfield.Prefix && !hideprefix && !((customfield.Prefix) == \'\')">{{customfield.Prefix}}</span>',
-            '<input is-open="fieldopened" datepicker-popup="{{format}}" class="form-control" type="text" ng-required="customfield.Required" ng-model="customfield.Date"/>',
+            '<input is-open="fieldopened" datepicker-popup="{{format}}" min="{{options.minDate}}" max="{{options.maxDate}}" class="form-control" type="text" ng-required="customfield.Required" ng-model="customfield.Date"/>',
             '<span class="input-group-addon" ng-if="customfield.Suffix && !hidesuffix && !((customfield.Suffix) == \'\')">{{customfield.Suffix}}</span>',
             '<i class="fa fa-calendar"></i>',
             '</div>',
@@ -501,7 +502,7 @@ function octimefield($filter) {
             scope.$watch('customfield',function(field){
                 if(!field) return;
                 if(scope.customfield.Value == ""){
-                    scope.customfield.Value = "12:00 PM";
+                    scope.customfield.Value = "12:00 AM";
                 }
             });
             scope.$watch('customfield.Time', function(newVal) {
