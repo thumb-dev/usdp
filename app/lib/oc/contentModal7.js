@@ -63,7 +63,8 @@ function ContentModalCtrl7($scope, $modal) {
         '</style>',
         '<div class="modal-header" style="padding:0;">',
         //Optional title in top header
-        '<img src="https://thumbprint.com/four51_images/Our-offices-will-be-closed-December-24th-January-2nd_v1.png" alt="Happy Holidays" style="width: 100%;border-top-left-radius: 6px;border-top-right-radius: 6px;">',
+        // '<img src="https://thumbprint.com/four51_images/Our-offices-will-be-closed-December-24th-January-2nd_v1.png" alt="Happy Holidays" style="width: 100%;border-top-left-radius: 6px;border-top-right-radius: 6px;">',
+        '<img src="https://thumbprint.com/four51_images/Hurricane Milton Web Banner.png" alt="Alert Message" style="width: 100%;border-top-left-radius: 6px;border-top-right-radius: 6px;">',
         // '<h5 class="modal-title text-primary">Happy Holiday from Thumbprint</i></h5>',
         //Optional close (x) in top header
         '<a class="pull-right close" ng-click="close()" style="top: 2px;">',
@@ -75,14 +76,17 @@ function ContentModalCtrl7($scope, $modal) {
         // content block 1
         //'<h4>Subheading</h4>',
         '<p>',
-        'Happy Holidays from all of us at Thumbprint!',
+        'Please be aware that we are in the path of Hurricane Milton. Our operations are currently suspended or limited through the end of this week as we prioritize the safety of our team and community',
         '</p>',
         '<p>',
-        'To let our team enjoy the holiday season, Thumbprint will be closed on <strong>Monday, December 25th, 2023 thru Monday, January 1st, 2024</strong>. All orders placed during that time will be processed beginning Tuesday, January 2nd.',
+        'We appreciate your understanding during this time.',
         '</p>',
-        '<p>',
-        'We wish you a Happy Holidays and New Year!',
-        '</p>',
+        // '<p>',
+        // 'We wish you a Happy Holidays and New Year!',
+        // '</p>',
+        // '<p>',
+        // 'If you have any questions please email: events@teamtag.com',
+        // '</p>',
         //content block 2
         // '<p>',
         // '<div ng-repeat="field in user.CustomFields | filter:{Name:\'ADMI_Popup\'}">',
